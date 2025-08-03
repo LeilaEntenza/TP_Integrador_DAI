@@ -27,19 +27,22 @@ export default function Home() {
       justifyContent: 'center',
     },
     textoTitulo: {
-        fontSize: '25px',
-        marginBottom: '2%',
-        marginTop: '2%'
+        fontSize: 25,
+        marginBottom: 8,
+        marginTop: 8
     },
     eventTexto: {
-        fontSize: '20px'
+        fontSize: 20
     },
     eventos: {
         width: '60%',
         backgroundColor: 'white',
-        padding: '2%',
-        borderRadius: '15px',
-        boxShadow: 'rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(220, 255, 230, 0.8) -6px -2px 16px 0px;'
+        padding: 8,
+        borderRadius: 15,
+        elevation: 4,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
     },
   });
-  

@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
 
 import Home from './screens/Home';
 import Crear from './screens/Crear';
 import Inscribirse from './screens/Inscribirse';
+import Login from './screens/Login';
+import Registrar from './screens/Registrar';
 
 const Tab = createBottomTabNavigator();
 const Tabs = () =>{
@@ -36,10 +39,17 @@ const Tabs = () =>{
     </Tab.Navigator>
   );
 }
+
 export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <NavigationContainer>
-      <Tabs/>
+      {isLoggedIn ? (
+        <Tabs/>
+      ) : (
+        <Login onLogin={() => setIsLoggedIn(true)} />
+      )}
     </NavigationContainer>
   );
 }

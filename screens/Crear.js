@@ -17,7 +17,9 @@ export default function Crear() {
         <TextInput style={styles.input}/>
         <Text style={styles.descripcion}>Precio</Text>
         <TextInput style={styles.input}/>
-        <Pressable style={styles.pressableB}>a</Pressable>
+        <Pressable style={styles.pressableB}>
+          <Text>a</Text>
+        </Pressable>
         <StatusBar style="auto" />
       </View>
     );
