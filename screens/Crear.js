@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-web';
 
 export default function Crear() {
@@ -18,7 +17,7 @@ export default function Crear() {
         <Text style={styles.descripcion}>Precio</Text>
         <TextInput style={styles.input}/>
         <Pressable style={styles.pressableB}>
-          <Text>a</Text>
+          <Text style={styles.textoPressable}>Crear</Text>
         </Pressable>
         <StatusBar style="auto" />
       </View>
@@ -39,17 +38,29 @@ export default function Crear() {
         fontSize: "20px",
         alignItems: "center",
         padding: "0.5%",
-        borderRadius: "10px"
+        borderRadius: "10px",
+        border: '1px solid grey'
       },
       descripcion: {
         fontSize: "20px",
         width: "60%",
-        textAlign: "start"
+        textAlign: "start",
+        margin: '0.5%'
       },
       textoCrear: {
         fontSize: "25px",
       },
       pressableB:{
-        
-      }
+        width: '10%',
+        borderRadius: '15px',
+        backgroundColor: '#8ca9c2',
+        padding: '1%',
+        margin: '1%',
+        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px;'
+      },
+      textoPressable: {
+        textAlign: 'center',
+        fontSize: '18px',
+        color: 'white'
+      },
     });

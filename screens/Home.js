@@ -28,11 +28,12 @@ export default function Home() {
     },
     textoTitulo: {
         fontSize: 25,
-        marginBottom: 8,
+        marginBottom: '1%',
         marginTop: 8
     },
     eventTexto: {
-        fontSize: 20
+        fontSize: 20,
+        marginBottom: '0.5%'
     },
     eventos: {
         width: '60%',
